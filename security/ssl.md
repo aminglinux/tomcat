@@ -1,4 +1,4 @@
-####Tomcat配置SSL
+#### Tomcat配置SSL
 如果前端有Nginx作为代理，那么Tomcat的ssl配置就不需要做了，而是直接在Nginx端配置SSL。
 
 参考：
@@ -14,7 +14,7 @@ JKS(.keystore)，微软(.pfx)，PEM(.key + .crt)。
 
 以下为Tomcat配置SSL的步骤:
 
-#####生成JKS格式证书
+#### 生成JKS格式证书
 ```
 cd /usr/local/tomcat/conf
 mkdir ssl
@@ -51,7 +51,7 @@ Enter key password for <testKey>
 Re-enter new password: 
 [Storing ssl/test.keystore]
 ```
-#####配置tomcat
+#### 配置tomcat
 ```
 vim /usr/local/tomcat/conf/server.xml   //搜索rsa.jks关键词，把相关配置段打开注释修改为如下
 
